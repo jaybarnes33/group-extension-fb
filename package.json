@@ -1,22 +1,24 @@
 {
-  "name": "vite-web-extension",
-  "displayName": "Web Extension Boilerplate",
+  "name": "group-monitor",
+  "displayName": "FB Group Monitor",
   "version": "1.1.0",
-  "description": "A simple chrome extension template with Vite, React, TypeScript and Tailwind CSS.",
+  "description": "A simple chrome extension to monitor FB Posts",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JohnBra/web-extension.git"
-  },
   "scripts": {
     "build": "vite build",
     "dev": "nodemon"
   },
   "type": "module",
   "dependencies": {
+    "@graywolfai/react-heroicons": "^2.0.1",
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^2.30.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
     "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' https://somedomain.com/ 'unsafe-inline' 'unsafe-eval';  media-src *"
+    />
+  </head>
+
+  <body>
+    <div id="__root"></div>
+    <script type="module" src="./index.tsx"></script>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "620307832639763",
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
+    </script>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
+  </body>
+</html>
