@@ -12,8 +12,11 @@ export default function Home(): JSX.Element {
   useEffect(() => {
     const checkFacebookSession = async () => {
       const cookies = await getCookies();
-      const hasFacebookSession = cookies.some((cookie) =>
-        cookie.domain.includes("facebook")
+      const hasFacebookSession = cookies.some(
+        (cookie) => cookie.name === "c_user"
+      );
+      window.location.replace(
+        `https://www.facebook.com/v18.0/dialog/oauth?client_id=1270798193758482&redirect=chrome-extension://foaljedljnoblmknlibhhjddhonpkglb/src/pages/dashboard/index.html`
       );
       console.log(hasFacebookSession);
       hasFacebookSession && setIsAuthenticated(true);
@@ -21,10 +24,10 @@ export default function Home(): JSX.Element {
     checkFacebookSession();
   }, []);
 
-  useEffect(() => {
-    isAuthenticated &&
-      window.location.replace("/src/pages/dashboard/index.html");
-  }, [isAuthenticated]);
+  // useEffect(() => {
+  //   isAuthenticated &&
+  //     window.location.replace("/src/pages/dashboard/index.html");
+  // }, [isAuthenticated]);
   interface Cookie {
     name: string;
     value: string;

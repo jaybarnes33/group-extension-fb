@@ -123,7 +123,7 @@ const Dashboard = () => {
               </h3>
               <div className="flex items-center text-gray-500 gap-2">
                 <FaFacebook size={20} />
-                <span>John Barnes Oduro Twumasi</span>
+                <span>John Barnes Oduro Twumasi</span>fzn
               </div>
             </div>
           </div>
